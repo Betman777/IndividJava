@@ -1,6 +1,7 @@
 package com.Zinchenko.homework.oop;
-public class Treadmill implements Obstacle{
-    private int length ;
+
+public class Treadmill implements Obstacle {
+    private int length;
 
     public Treadmill(int length) {
         this.length = length;
@@ -12,7 +13,7 @@ public class Treadmill implements Obstacle{
 
     @Override
     public boolean overcome(Competitor competitor) {
-        return false;
+        return competitor.run(length);
 
     }
 }

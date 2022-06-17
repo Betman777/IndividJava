@@ -9,13 +9,13 @@ public class Cat extends Competitor {
 
 
     @Override
-    public boolean run() {
-        int length = 0;
-        if (getDistance() >= length) {
-            System.out.println("Cat" + getName() + "runned" + getDistance() + "metr");
+    public boolean run(int distance) {
+        if (this.distance >= distance) {
+            System.out.println("Cat: " + getName() + " passed the obstacle \"Treadmill \"" + " at a distance " + getDistance() + " meters");
             return true;
         } else {
-            System.out.println(getName() + "you luse");
+            System.out.println("Cat: " + getName() + " did not pass the obstacle \"Treadmill \"" + " at a distance " + getDistance() + " meters");
+            System.out.println(getName() + " - Dropped out of competition");
             return false;
         }
 
@@ -23,13 +23,13 @@ public class Cat extends Competitor {
     }
 
     @Override
-    public boolean jump() {
-        double heigth=0;
-        if (this.jumpToHeight >= heigth) {
-            System.out.println("Cat" + getName() + "jumping" + getJumpToHeight() + "metr");
+    public boolean jump(double height) {
+        if (this.jumpToHeight >= height) {
+            System.out.println("Cat: " + getName() + " passed the obstacle \" Wall \"" + " at a distance " + getJumpToHeight() + " meters");
             return true;
         } else {
-            System.out.println(getName() + "you luse");
+            System.out.println(" Cat: " + getName() + " did not pass the obstacle \" Wall \"" + " at a distance " + getJumpToHeight() + " meters");
+            System.out.println( getName() + " - Dropped out of competition");
             return false;
         }
     }
