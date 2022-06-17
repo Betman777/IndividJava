@@ -1,5 +1,7 @@
 package com.Zinchenko.homework.oop;
 
+import java.util.Arrays;
+
 public class Main {
 //    1. Создайте тип данных Участник и несколько его реализаций: Человек, Кот, Робот.
 //
@@ -39,10 +41,8 @@ public class Main {
             for (Obstacle obstacle : obstacles) {
                 if (!obstacle.overcome(competitor)) {
                     break;
-
                 }
-                competitor.run();
-                competitor.jump();
+
             }
         }
 

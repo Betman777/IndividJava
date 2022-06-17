@@ -9,7 +9,8 @@ public class Cat extends Competitor {
 
 
     @Override
-    public boolean run(int length) {
+    public boolean run() {
+        int length = 0;
         if (getDistance() >= length) {
             System.out.println("Cat" + getName() + "runned" + getDistance() + "metr");
             return true;
@@ -22,7 +23,8 @@ public class Cat extends Competitor {
     }
 
     @Override
-    public boolean jump(double heigth) {
+    public boolean jump() {
+        double heigth=0;
         if (this.jumpToHeight >= heigth) {
             System.out.println("Cat" + getName() + "jumping" + getJumpToHeight() + "metr");
             return true;
