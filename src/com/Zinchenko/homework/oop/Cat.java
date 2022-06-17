@@ -1,6 +1,6 @@
 package com.Zinchenko.homework.oop;
 
-public class Cat extends Competitor{
+public class Cat extends Competitor {
 
 
     public Cat(String name, int distance, double jumpToHeight) {
@@ -8,29 +8,27 @@ public class Cat extends Competitor{
     }
 
 
-
-
     @Override
-    public boolean  run(Treadmill treadmill) {
-        if(this.distance >= getDistance()) {
-            System.out.println("Human" + getName() + "runned");
+    public boolean run(int length) {
+        if (getDistance() >= length) {
+            System.out.println("Cat" + getName() + "runned" + getDistance() + "metr");
             return true;
-        }else {
-            System.out.println("you luse");
-
+        } else {
+            System.out.println(getName() + "you luse");
+            return false;
         }
-        return false;
+
 
     }
 
     @Override
-    public boolean  jump (Wall wall) {
-        if(this.jumpToHeight >= getJumpToHeight()) {
-            System.out.println("Human " + getName() + " jumping " );
-        }else {
-            System.out.println("you luse");
-
+    public boolean jump(double heigth) {
+        if (this.jumpToHeight >= heigth) {
+            System.out.println("Cat" + getName() + "jumping" + getJumpToHeight() + "metr");
+            return true;
+        } else {
+            System.out.println(getName() + "you luse");
+            return false;
         }
-        return false;
-
-    }}
+    }
+}

@@ -8,14 +8,13 @@ public class Human extends Competitor {
     }
 
 
-
     @Override
-    public boolean   run(Treadmill treadmill ) {
-        if(getDistance()>= treadmill.getLength()) {
-            System.out.println("Human" + getName() + "runned");
+    public boolean run(int length) {
+        if (getDistance() >= length) {
+            System.out.println("Human" + getName() + "runned" + getDistance() + "metr");
             return true;
-        }else {
-            System.out.println("you luse");
+        } else {
+            System.out.println(getName() + "you luse");
             return false;
         }
 
@@ -23,12 +22,12 @@ public class Human extends Competitor {
     }
 
     @Override
-    public boolean  jump (Wall wall) {
-        if(this.jumpToHeight >= wall.getHeight()) {
-            System.out.println("Human" + getName() + "jumping");
+    public boolean jump(double heigth) {
+        if (this.jumpToHeight >= heigth) {
+            System.out.println("Human" + getName() + "jumping" + getJumpToHeight() + "metr");
             return true;
-        }else {
-            System.out.println("you luse");
+        } else {
+            System.out.println(getName() + "you luse");
             return false;
         }
 

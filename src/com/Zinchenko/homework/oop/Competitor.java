@@ -23,7 +23,7 @@ public abstract class Competitor {
         return jumpToHeight;
     }
 
-    public abstract boolean   run(Treadmill treadmill);
+    public abstract boolean run();
 
-    public abstract boolean  jump(Wall wall);
+    public abstract boolean jump();
 }

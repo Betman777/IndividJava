@@ -24,30 +24,30 @@ public class Main {
 //            "Участник[ИМЯ] не прошел препятствие[НАЗВАНИЕ] на дистанции[ЗНАЧЕНИЕ]. Пройдено[ЗНАЧЕНИЕ]"
 
     public static void main(String[] args) {
-        Human human = new Human("Alex",10000,2.0);
-        Cat cat = new Cat("Vaska",1000,2.3);
-        Robot robot = new Robot("R2D2",30000,3.0);
+        Human human = new Human("Alex", 10000, 2.0);
+        Cat cat = new Cat("Vaska", 1000, 2.3);
+        Robot robot = new Robot("R2D2", 30000, 3.0);
+
 
         Wall wall = new Wall(2.1);
         Treadmill treadmill = new Treadmill(10000);
 
-        Competitor [] competitors = new Competitor[]{human,cat,robot};
-        Obstacle[] obstacles = new Obstacle[]{treadmill,wall};
+        Competitor[] competitors = new Competitor[]{human, cat, robot};
+        Obstacle[] obstacles = new Obstacle[]{treadmill, wall};
 
-        for (Competitor competitor : competitors){
-            for (Obstacle obstacle : obstacles){
-                if(!obstacle.overcome(competitor)){
+        for (Competitor competitor : competitors) {
+            for (Obstacle obstacle : obstacles) {
+                if (!obstacle.overcome(competitor)) {
                     break;
-                    //     for (int i = 0;i < competitors.length;i++){
-                    //        for (int j = 0; j < obstacles.length ; j++) {
-                    //            if(competitors[i].run()<= obstacles[j])
-//
 
                 }
+                competitor.run();
+                competitor.jump();
             }
-
         }
 
-
     }
+
+
 }
+
